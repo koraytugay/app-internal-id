@@ -1,0 +1,18 @@
+{
+  "name": "App Internal Extension",
+  "description": "App Internal Extension Description",
+  "version": "0.1",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+   "tabs"
+  ],
+  "host_permissions": [
+    "https://iq.sonatype.dev/api/v2/applications",
+    "https://test.iq.sonatype.dev/api/v2/applications",
+    "http://localhost:8070/api/v2/applications"
+  ]
+}
