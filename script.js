@@ -21,6 +21,6 @@ function doTheNeedful(url, publicId) {
 function mainDiv() {
   alert('hello 1');
   fetch('https://sonatype.sonatype.app/platform/rest/ci/componentDetails/application/nexus-iq-fortify/allVersions?componentIdentifier=%7B%22format%22%3A%22maven%22%2C%22coordinates%22%3A%7B%22artifactId%22%3A%22jetty-server%22%2C%22classifier%22%3A%22%22%2C%22extension%22%3A%22jar%22%2C%22groupId%22%3A%22org.eclipse.jetty%22%2C%22version%22%3A%229.4.51.v20230217%22%7D%7D&hash=d0572c8460eb26adf842&matchState=exact&proprietary=false&identificationSource=Sonatype&scanId=6ac1cd0aaac54ae7bd6acd147d6ec675&stageId=build&dependencyType=transitive&timestamp=1729114732399', {mode: 'no-cors'})
-  .then(response =>  alert(response));
+  .then(response => response.json()).then(json => alert(json));
   return document.getElementById("main");
 }
